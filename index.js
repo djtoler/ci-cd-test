@@ -31,7 +31,15 @@ let users = [
         "games_won": 88,
         "all_time_total_score": 8624
       },
-
+     {
+        "username": "billy2222",
+        "email": "billy@myemail.com",
+        "picture": "http://s3.amazonaws.com/[bucket_name]/ http://[bucket_name].s3.amazonaws.com/",
+        "user_since": "05-22-2023",
+        "games_played": 148,
+        "games_won": 88,
+        "all_time_total_score": 8624
+      }
 
 ]
 
