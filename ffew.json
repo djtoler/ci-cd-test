@@ -1,0 +1,82 @@
+curl -X POST "https://api.getpostman.com/collections?workspace=093c2122-6e1b-4afc-8653-fc14143dfdfb&apikey=PMAK-62bfdaccace6c75182822ade-85c90fb82e19bc861c17b893da92f459a6" --header 'Content-Type: application/json' --data-raw '{
+    "collection": {
+        "item": [
+        {
+          "name": "auto-enviornment",
+          "id": "fe6afd7e-42b2-4aa4-a73c-3d303ed49538",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "basic request",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "url": "localhost:3000/users",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "response": [
+            {
+                "id": "3de2d163-7b37-443e-ac12-088475be7a7f",
+                "name": "This is a list of users",
+                "originalRequest": {
+                    "url": {
+                        "path": [
+                            "users"
+                        ],
+                        "host": [
+                            "{{baseUrl}}"
+                        ],
+                        "query": [],
+                        "variable": []
+                    },
+                    "method": "GET",
+                    "body": {}
+                },
+                "status": "OK",
+                "code": 200,
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": "[\n  {\n    \"username\": \"billy9999\",\n    \"email\": \"billy@myemail.com\",\n    \"picture\": \"http://s3.amazonaws.com/[bucket_name]/ http://[bucket_name].s3.amazonaws.com/\",\n    \"user_since\": \"05-22-2023\",\n    \"games_played\": 148,\n    \"games_won\": 88,\n    \"all_time_total_score\": 8624\n  },\n  {\n    \"username\": \"billy9999\",\n    \"email\": \"billy@myemail.com\",\n    \"picture\": \"http://s3.amazonaws.com/[bucket_name]/ http://[bucket_name].s3.amazonaws.com/\",\n    \"user_since\": \"05-22-2023\",\n    \"games_played\": 148,\n    \"games_won\": 88,\n    \"all_time_total_score\": 8624\n  }\n]",
+                "cookie": [],
+                "_postman_previewlanguage": "json"
+            }
+          ]
+        }
+        ],
+        "event": [],
+        "variable": [
+            {
+                "type": "string",
+                "value": "localhost:3000",
+                "key": "baseUrl"
+            }
+        ],
+        "info": {
+            "_postman_id": "ee5fc8ce-1e75-4550-9ce1-f059030c389e",
+            "name": "User API",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            }
+        }
+    }
+}'
